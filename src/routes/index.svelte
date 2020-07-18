@@ -1,5 +1,5 @@
 <script>
-  import Carousel from '../components/Carousel.svelte';
+  // import Carousel from "../components/Carousel.svelte";
 </script>
 
 <div class="container">
@@ -48,7 +48,6 @@
     </div>
   </div>
 </div>
-<Carousel/>
 <style>
   .carousel {
     display: flex;
