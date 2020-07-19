@@ -76,4 +76,10 @@
     cursor: pointer;
     top: 5px;
   }
+
+  @media screen and (max-width: 400px) {
+    .search-box:focus {
+      width: 200px;
+    }
+  }
 </style>

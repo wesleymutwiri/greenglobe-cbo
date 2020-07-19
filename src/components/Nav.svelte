@@ -166,10 +166,10 @@ onMount(() => {
 			display: flex;
 			flex-direction: column;
 		}
-		.search {
+		/* .search {
 			display: flex;
 			flex-direction: column;
-		}
+		} */
 		.mobile-icon{
 			display: inline-flex;
 		}
