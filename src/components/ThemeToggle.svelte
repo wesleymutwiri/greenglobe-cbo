@@ -33,7 +33,7 @@
     position: absolute;
     left: 0;
     bottom: 100%;
-    margin: 1em -0.5em;
+    margin: 2em -0.5em;
     padding: 0.5em;
     width: 100%;
     border-radius: 5px;
@@ -66,7 +66,7 @@
     --i: 0;
     --j: calc(1 - var(--i));
     display: grid;
-    grid-gap: 0.5em 0.25em;
+    grid-gap: 0.5em 0.5em;
     overflow: hidden;
     padding: 0.5em;
     height: 2.5em;
@@ -79,8 +79,8 @@
   }
   #time + label:before,
   #time + label:after {
-    width: 2.5em;
-    height: 2.5em;
+    width: 2em;
+    height: 2em;
     transition: inherit;
     content: "";
   }
