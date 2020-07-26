@@ -17,30 +17,58 @@
         ? currentCarouselIndex - 1
         : carouselPhotos.length - 1);
 </script>
-<div class="carousel">
+{#each [carouselPhotos[currentCarouselIndex]] as photo (currentCarouselIndex)}
+<div class="carousel" style="background-image: url({photo});" transition:fade>
   <div class="heading">
     Who cares
   </div>
-  {#each [carouselPhotos[currentCarouselIndex]] as photo (currentCarouselIndex)}
-  <img transition:fade src="{photo}" alt="" />
-  {/each}
   <div class="content">
-    <div class="read-more">
-      <a href="#">Read More</a>
-    </div>
+    <a href="#" class="read-more">Read More</a>
     <div class="carousel-controls">
-      <button on:click="{next}">Next</button>
-      <button on:click="{previous}">Previous</button>
+      <span on:click="{previous}" class="round-button previous">
+        <svg
+          viewBox="0 0 24 24"
+          width="24"
+          height="24"
+          stroke="currentColor"
+          stroke-width="2"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="css-i6dzq1"
+        >
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </span>
+      <span on:click="{next}" class="round-button next">
+        <svg
+          viewBox="0 0 24 24"
+          width="24"
+          height="24"
+          stroke="currentColor"
+          stroke-width="2"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="css-i6dzq1"
+        >
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </span>
     </div>
   </div>
 </div>
+{/each}
 
 <style>
   .carousel {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 90vh;
+    height: 92vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
   .heading {
     font-size: 6rem;
@@ -60,6 +88,7 @@
     text-transform: uppercase;
     margin-top: 1.5rem;
     display: block;
+    font-weight: 900;
   }
   .read-more:hover {
     color: #fed121;
@@ -69,6 +98,16 @@
     margin-right: 2rem;
   }
 
+  .round-button {
+    border-radius: 50%;
+    background: var(--theme-svg);
+    padding: 10px;
+    text-align: center;
+    height: max-content;
+    padding-top: 22px;
+    color: #fff;
+    cursor: pointer;
+  }
   @media screen and (max-width: 600px) {
     .heading {
       font-size: 4rem;
