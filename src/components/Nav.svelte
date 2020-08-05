@@ -1,6 +1,6 @@
 <script>
 	import SearchButton from './SearchButton.svelte';
-	import ThemeToggle from './ThemeToggle.svelte';
+	// import ThemeToggle from './ThemeToggle.svelte';
 	import { onMount } from "svelte";
 	export let segment;
 
@@ -200,7 +200,6 @@ onMount(() => {
 	</ul>
 	<div class="search">
 	<SearchButton/>
-	<ThemeToggle/>
 </div>
 </div>
 </nav>
