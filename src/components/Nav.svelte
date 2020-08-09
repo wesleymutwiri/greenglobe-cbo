@@ -20,12 +20,14 @@ onMount(() => {
 })
 </script>
 
+
 <style>
 	nav {
 		/* grid-template-areas: "logo navbar-items search"; */
 		border-bottom: 1px solid rgba(255,62,0,0.1);
 		font-weight: 300;
 		height: 65px;
+		margin-bottom: 12px;
 	}
 	.nav-elements {
 		display: flex;
@@ -37,7 +39,7 @@ onMount(() => {
 
 	.mobile-icon {
 		width: 25px;
-		height: 14px;
+		height: 25px;
 		position: relative;
 		cursor: pointer;
 		display: none;
@@ -184,16 +186,19 @@ onMount(() => {
 	<div class={`nav-elements${showMobileMenu ? ' mobile' : ''}`}>
 	
 	<div class="logo">
-	<img src="https://via.placeholder.com/40" alt="">
+		<a href="/">
+			<img src="https://via.placeholder.com/40" alt="">
+		</a>
 	</div>
 	<ul>
-		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">home</a></li>
 		<li><a aria-current="{segment === 'about' ? 'page' : undefined}" href="about">about</a></li>
 		
 		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
 			the blog data when we hover over the link or tap it on a touchscreen -->
 			<li><a rel=prefetch aria-current="{segment === 'blog' ? 'page' : undefined}" href="blog">blog</a></li>
 			<li><a  aria-current="{segment === 'gallery' ? 'page' : undefined}" href="gallery">Gallery</a></li>
+			<li><a  aria-current="{segment === 'news' ? 'page' : undefined}" href="News And events">News And Events</a></li>
+
 			<li><a  aria-current="{segment === 'contact' ? 'page' : undefined}" href="contact">Contact us</a></li>
 
 
