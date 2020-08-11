@@ -13,11 +13,15 @@
 </script>
 
 <ul>
-  {#each posts as post}
+  {#if posts} {#each posts as post}
   <li>
     <a rel="prefetch" href="blog/{post.slug}">
       {post.title.rendered}
     </a>
   </li>
-  {/each}
+  {/each} {:else}
+  <li>
+    <p>Currently no blog posts exist</p>
+  </li>
+  {/if}
 </ul>
