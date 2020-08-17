@@ -4,7 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <meta name="theme-color" content="#333333" />
+    <meta
+      name="description"
+      content="Green Globe CBO is a grass-root Not-for-profit Community Based Organization
+    (CBO) based in Nairobi, Kenya."
+    />
 
+    <meta name="twitter:dnt" content="on" />
+    <meta name="twitter:widgets:csp" content="on" />
     %sapper.base%
     <link
       href="https://fonts.googleapis.com/css2?family=Questrial&display=swap"
@@ -30,7 +37,13 @@
 
     <!-- Sapper creates a <script> tag containing `src/client.js`
 	     and anything else it needs to hydrate the app and
-	     initialise the router -->
+       initialise the router -->
+    <script
+      context="module"
+      async
+      src="https://platform.twitter.com/widgets.js"
+      charset="utf-8"
+    ></script>
     %sapper.scripts%
   </body>
 </html>
