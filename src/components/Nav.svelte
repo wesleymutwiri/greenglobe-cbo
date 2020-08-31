@@ -185,19 +185,19 @@ onMount(() => {
 </div>
 	<div class={`nav-elements${showMobileMenu ? ' mobile' : ''}`}>
 	
-	<div class="logo">
+	<div class="logo" on:click={handleMobileIconClick} >
 		<a href="/">
 			<img src="https://via.placeholder.com/40" alt="">
 		</a>
 	</div>
-	<ul>
+	<ul on:click={handleMobileIconClick} >
 		<li><a aria-current="{segment === 'about' ? 'page' : undefined}" href="about">about</a></li>
 		
 		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
 			the blog data when we hover over the link or tap it on a touchscreen -->
 			<li><a rel=prefetch aria-current="{segment === 'blog' ? 'page' : undefined}" href="blog">blog</a></li>
 			<li><a  aria-current="{segment === 'gallery' ? 'page' : undefined}" href="gallery">Gallery</a></li>
-			<li><a  aria-current="{segment === 'news' ? 'page' : undefined}" href="News And events">News And Events</a></li>
+			<li><a  aria-current="{segment === 'news' ? 'page' : undefined}" href="news">News And Events</a></li>
 
 			<li><a  aria-current="{segment === 'contact' ? 'page' : undefined}" href="contact">Contact us</a></li>
 
