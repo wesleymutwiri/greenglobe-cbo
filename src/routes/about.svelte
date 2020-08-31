@@ -134,7 +134,7 @@
   .container {
     padding: 20px;
     margin: 40px;
-    max-width: 100vw;
+    max-width: 90vw;
     line-height: 1.5;
   }
   .container > * {
