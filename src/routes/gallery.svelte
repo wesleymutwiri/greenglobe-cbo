@@ -57,68 +57,57 @@
   ];
 </script>
 
-<div class="container">
-  <div class="waterfall">
-    {#each images as image}
-    <div class="item"><img src="{image}" /></div>
-    {/each}
-  </div>
+<div class="gallery">
+  {#each images as image}
+  <div class="item"><img src="{image}" /></div>
+  {/each}
 </div>
 <style>
-  .container {
-    display: grid;
-    place-content: center;
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
   }
-  .waterfall {
-    width: 80vw;
-    margin: 10rem 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    grid-gap: 1rem;
-    grid-auto-flow: row dense;
-    grid-auto-rows: 10vh;
+
+  .item {
+    height: 40vh;
+    flex-grow: 1;
   }
-  .waterfall .item:nth-of-type(3n + 1) {
-    grid-row: auto / span 3;
+  .item:last-child {
+    flex-grow: 10;
   }
-  .waterfall .item:nth-of-type(3n + 2) {
-    grid-row: auto / span 4;
-  }
-  .waterfall .item:nth-of-type(3n + 3) {
-    grid-row: auto / span 5;
-  }
-  .waterfall .item {
-    overflow: hidden;
-    -webkit-transform: rotate(-7.5deg);
-    transform: rotate(-7.5deg);
-    /* -webkit-filter: saturate(0) contrast(10) brightness(0.2);
-    filter: saturate(0) contrast(10) brightness(0.2); */
-    -webkit-transition: border 0.1s, -webkit-transform 0.2s;
-    transition: border 0.1s, -webkit-transform 0.2s;
-    transition: transform 0.2s, border 0.1s;
-    transition: transform 0.2s, border 0.1s, -webkit-transform 0.2s;
-    box-sizing: border-box;
-    border: 1em solid transparent;
-  }
-  .waterfall .item img {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
+
+  img {
+    max-height: 100%;
+    min-width: 100%;
     object-fit: cover;
-    -webkit-transform: rotate(15deg);
-    transform: rotate(15deg);
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
+    vertical-align: bottom;
   }
-  .waterfall .item.inbound {
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-    -webkit-filter: none;
-    filter: none;
-    border-bottom: 1px solid white;
+
+  @media (max-aspect-ratio: 1/1) {
+    .item {
+      height: 30vh;
+    }
   }
-  .waterfall .item.inbound img {
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
+
+  @media (max-height: 480px) {
+    .item {
+      height: 80vh;
+    }
+  }
+
+  @media (max-aspect-ratio: 1/1) and (max-width: 480px) {
+    .gallery {
+      flex-direction: row;
+    }
+
+    .item {
+      height: auto;
+      width: 100%;
+    }
+    img {
+      width: 100%;
+      max-height: 75vh;
+      min-width: 0;
+    }
   }
 </style>
