@@ -1,8 +1,22 @@
 <script>
   import Carousel from "../components/Carousel.svelte";
+  import {onMount } from 'svelte';
+
+  onMount(()=> {
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/"
+          });
+        }
+      });
+    }
+  });
 </script>
 <svelte:head>
-	<title>Greenglobe-cbo</title>
+  <title>Greenglobe-cbo</title>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </svelte:head>
 <div class="container">
   <Carousel/>
