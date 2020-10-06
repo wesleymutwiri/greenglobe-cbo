@@ -19,7 +19,7 @@
     ...frontMatter.attributes,
     html: md.render(frontMatter.body),
   };
-  console.log(post);
+  // console.log(post);
 </script>
 <svelte:head>
   <title>{post.title.rendered}</title>

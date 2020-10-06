@@ -5,7 +5,7 @@ import path from "path";
 
 export async function get(req, res) {
   const posts = await new Promise((resolve, reject) =>
-    glob("static/_posts/*md", (err, files) => {
+    glob("static/_posts/*.md", (err, files) => {
       return resolve(files);
     })
   );
