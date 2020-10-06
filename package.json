@@ -19,7 +19,6 @@
     "markdown-it": "^11.0.1",
     "mz": "^2.7.0",
     "polka": "next",
-    "rollup-plugin-json": "^4.0.0",
     "sapper-environment": "^1.0.1",
     "sirv": "^0.4.0",
     "swiper": "^6.0.4"
