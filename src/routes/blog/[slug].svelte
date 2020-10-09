@@ -1,6 +1,6 @@
 <script context="module">
   export async function preload({ params, query }) {
-    const res = await this.fetch(`_posts/${params.slug}.md`);
+    const res = await this.fetch(`./_posts/${params.slug}.md`);
     if (res.status === 200) {
       return { postMd: await res.text() };
     } else {
@@ -11,13 +11,13 @@
 
 <script>
   import fm from "front-matter";
-  import MarkdownIt from "markdown-it";
+  import marked from "marked";
   export let postMd;
-  const md = new MarkdownIt();
+  const renderer = new marked.Renderer();
   $: frontMatter = fm(postMd);
   $: post = {
     ...frontMatter.attributes,
-    html: md.render(frontMatter.body),
+    html: marked(frontMatter.body, { renderer }),
   };
   // console.log(post);
 </script>
