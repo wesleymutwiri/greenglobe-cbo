@@ -18,10 +18,8 @@
         : carouselPhotos.length - 1);
 </script>
 {#each [carouselPhotos[currentCarouselIndex]] as photo (currentCarouselIndex)}
-<div class="carousel" style="background-image: url({photo});" transition:fade>
-  <div class="heading">
-    Who cares
-  </div>
+<div class="carousel" style="background-image: url({photo})" transition:fade>
+  <div class="heading">Who cares</div>
   <div class="content">
     <a href="#" class="read-more">Read More</a>
     <div class="carousel-controls">
@@ -66,9 +64,10 @@
     flex-direction: column;
     justify-content: space-around;
     height: 92vh;
-    background-size: cover;
+    background-size: 40% 90%;
     background-repeat: no-repeat;
     background-position: center;
+    background-attachment: fixed;
   }
   .heading {
     font-size: 6rem;
