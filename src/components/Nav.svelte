@@ -144,7 +144,10 @@ onMount(() => {
 		display: block;
 		text-transform: capitalize;
 	}
-
+	.logo img {
+		height: 50px;
+		width: 50px;
+	}
 	@media screen and (max-width: 1260px){
 		.nav-elements{
 			display: none;
@@ -187,7 +190,7 @@ onMount(() => {
 	
 	<div class="logo" on:click={handleMobileIconClick} >
 		<a href="/">
-			<img src="https://via.placeholder.com/40" alt="">
+			<img src="GreenGlobelogo.png" alt="">
 		</a>
 	</div>
 	<ul on:click={handleMobileIconClick} >
