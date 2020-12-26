@@ -7,12 +7,12 @@
 	"start_url": "/",
 	"icons": [
 		{
-			"src": "logo-192.png",
+			"src": "GreenGlobelogo.png",
 			"sizes": "192x192",
 			"type": "image/png"
 		},
 		{
-			"src": "logo-512.png",
+			"src": "GreenGlobelogo.png",
 			"sizes": "512x512",
 			"type": "image/png"
 		}
