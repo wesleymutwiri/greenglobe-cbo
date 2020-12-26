@@ -2,10 +2,7 @@
   import { fade } from "svelte/transition";
 
   const carouselPhotos = [
-    "https://picsum.photos/300/200?random=1",
-    "https://picsum.photos/300/200?random=2",
-    "https://picsum.photos/300/200?random=3",
-    "https://picsum.photos/300/200?random=4",
+    "globe.svg",
   ];
 
   let currentCarouselIndex = 0;
