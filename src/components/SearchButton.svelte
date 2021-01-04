@@ -29,14 +29,14 @@
     border-radius: 20px;
     border: none;
     cursor: pointer;
-    background: #fed121;
+    background: #0cf913;
   }
   .search-box + label .search-icon {
     color: black;
   }
   .search-box:hover {
     color: white;
-    background: #ae901a;
+    background: #0cf913;
     box-shadow: 0 0 0 5px #3d4752;
   }
   .search-box:hover + label .search-icon {
@@ -71,7 +71,7 @@
 
   .search-icon {
     position: relative;
-    left: -34px;
+    left: -36px;
     color: white;
     cursor: pointer;
     top: 5px;
