@@ -11,7 +11,7 @@ export const presets = [
     name: "dark",
     colors: {
       text: "#f1f1f1",
-      background: "#060705",
+      background: "#333432",
       svg: "#1e1e1e",
     },
   },
