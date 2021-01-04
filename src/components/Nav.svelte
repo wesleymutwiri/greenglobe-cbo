@@ -25,9 +25,9 @@ onMount(() => {
 	nav {
 		/* grid-template-areas: "logo navbar-items search"; */
 		border-bottom: 1px solid rgba(255,62,0,0.1);
-		font-weight: 300;
+		font-weight: 900;
 		height: 65px;
-		margin-bottom: 12px;
+		margin-bottom: 22px;
 	}
 	.nav-elements {
 		display: flex;
@@ -122,7 +122,10 @@ onMount(() => {
 		float: left;
 		padding: 0 4rem;
 	}
-
+	li a:hover {
+		transform: scale(1.2);
+		font-weight: bold;
+	}
 	[aria-current] {
 		position: relative;
 		display: inline-block;
@@ -133,7 +136,7 @@ onMount(() => {
 		content: '';
 		width: calc(99% - 1em);
 		height: 2px;
-		background-color: #fed121;
+		background-color: #0cf913;
 		display: block;
 		bottom: 10px;
 	}
@@ -149,6 +152,9 @@ onMount(() => {
 		width: 50px;
 	}
 	@media screen and (max-width: 1260px){
+		nav {
+			margin-bottom: 0px;
+		}
 		.nav-elements{
 			display: none;
 			width: 100%;
@@ -166,6 +172,7 @@ onMount(() => {
 			position: fixed;
 			justify-content: space-around;
 			align-items: center;
+			z-index: 12;
 		}
 		ul {
 			display: flex;
@@ -200,7 +207,7 @@ onMount(() => {
 			the blog data when we hover over the link or tap it on a touchscreen -->
 			<li><a rel=prefetch aria-current="{segment === 'blog' ? 'page' : undefined}" href="blog">blog</a></li>
 			<li><a  aria-current="{segment === 'gallery' ? 'page' : undefined}" href="gallery">Gallery</a></li>
-			<li><a  aria-current="{segment === 'news' ? 'page' : undefined}" href="news">News And Events</a></li>
+			<li><a  aria-current="{segment === 'leaders' ? 'page' : undefined}" href="leaders">Leadership</a></li>
 
 			<li><a  aria-current="{segment === 'contact' ? 'page' : undefined}" href="contact">Contact us</a></li>
 
