@@ -148,7 +148,7 @@
   h6 {
     font-weight: 900;
     font-size: larger;
-    color: #fed121;
+    color: #0cf913;
   }
   ol {
     margin-left: 3rem;
