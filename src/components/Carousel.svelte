@@ -113,6 +113,7 @@
     font-size: 6rem;
     font-weight: 900;
     padding-left: 2rem;
+    font-family: 'Montserrat', sans-serif;
   }
 
   .content {
