@@ -22,11 +22,12 @@
     for (const itemEl of itemEls) observer.observe(itemEl);
   });
   const images = [
-    "https://source.unsplash.com/featured?98",
-    "https://source.unsplash.com/featured?97",
-    "https://source.unsplash.com/featured?96",
-    "https://source.unsplash.com/featured?95",
-    "https://source.unsplash.com/featured?94",
+    "https://res.cloudinary.com/wesleymochiemo/image/upload/v1598892204/DSC_8927_srocli.jpg",
+    "https://www.dropbox.com/s/ygojuh0f0yhdcz8/DSC_6260.JPG?raw=1",
+    "https://www.dropbox.com/s/ke9lv50amhmrwej/DSC_6171.JPG?raw=1",
+    "https://www.dropbox.com/s/blckh8to65rjs2x/DSC_6162.JPG?raw=1",
+    "https://www.dropbox.com/s/91whrz1hd4ss9ti/DSC_6451.JPG?raw=1",
+    "https://www.dropbox.com/s/jnmneuezil6svgx/DSC_6401.JPG?raw=1",
     "https://source.unsplash.com/featured?93",
     "https://source.unsplash.com/featured?92",
     "https://source.unsplash.com/featured?91",
@@ -72,6 +73,7 @@
     height: 40vh;
     flex-grow: 1;
   }
+
   .item:last-child {
     flex-grow: 10;
   }
@@ -104,6 +106,7 @@
       height: auto;
       width: 100%;
     }
+
     img {
       width: 100%;
       max-height: 75vh;
