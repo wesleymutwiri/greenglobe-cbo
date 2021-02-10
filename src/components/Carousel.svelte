@@ -1,7 +1,7 @@
 <script>
   import { fade } from "svelte/transition";
 
-  const carouselPhotos = ["globe.svg", "globe.svg"];
+  const carouselPhotos = ["globe.svg", "Environment-bro.svg"];
 
   let currentCarouselIndex = 0;
   const next = () =>

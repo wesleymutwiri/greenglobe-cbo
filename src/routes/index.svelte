@@ -38,7 +38,8 @@
   <div class="projects">
     <div class="project">
       <div class="project-text">
-
+        <h4>Community Engagement</h4>
+        
       </div>
       <div class="project-image">
         <img src="" alt="">
@@ -52,12 +53,12 @@
     </div>
   </div>
 </div>
-<div class="fill-width">
+<!-- <div class="fill-width">
   <a class="twitter-timeline" data-align="center" data-theme="dark" data-height="1000"
     href="https://twitter.com/GreenGlobe_CBO?ref_src=twsrc%5Etfw">Tweets by GreenGlobe_CBO</a>
   <a href="https://twitter.com/GreenGlobe_CBO?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large"
     data-show-count="false">Follow @GreenGlobe_CBO</a>
-</div>
+</div> -->
 <style>
   h3 {
     text-align: center;
